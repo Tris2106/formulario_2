@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>Formulario de inscripción</title>
+</head>
+<body>
+
+<h1>Formulario de inscripción</h1>
+
+<form>
+
+<!-- ================= DATOS PERSONALES ================= -->
+<fieldset>
+<legend>Datos personales</legend>
+
+Tipo de Documento:<br>
+
+<input type="radio" name="documento" value="Cedula"> Cedula<br>
+<input type="radio" name="documento" value="Tarjeta de identidad"> Tarjeta de identidad<br>
+<input type="radio" name="documento" value="Pasaporte"> Pasaporte<br>
+
+Número de documento:
+<input type="text" name="documento" required>
+<br><br>
+
+Nombres:
+<input type="text" name="nombres" minlength="3" maxlength="64" required>
+<br><br>
+
+Apellidos:
+<input type="text" name="apellidos" minlength="3" maxlength="64" required>
+<br><br>
+
+</fieldset>
+
+<br>
+
+<!-- ================= CONTACTO ================= -->
+<fieldset>
+<legend>Información de contacto</legend>
+
+Dirección:
+<input type="text" name="direccion" required>
+<br><br>
+
+Teléfono fijo:
+<input type="tel" name="telefono_fijo" required>
+<br><br>
+
+Celular:
+<input type="tel" name="celular" required>
+<br><br>
+
+Correo electrónico:
+<input type="email" name="correo" required>
+<br><br>
+
+</fieldset>
+
+<br>
+
+<!-- ================= CUENTA ================= -->
+<fieldset>
+<legend>Datos de cuenta</legend>
+
+Usuario:
+<input type="text" name="usuario"
+pattern="[A-Za-z]{3,14}[0-9]{0,2}"
+title="Solo letras y hasta 2 números al final"
+required>
+<br><br>
+
+Contraseña:
+<input type="password" name="password"
+pattern="(?=.*[A-Z])(?=.*[a-z]{2,})(?=.*[0-9]{5,})(?=.*[!?\-+/&$]).{16}"
+title="Debe cumplir con todos los requisitos"
+required>
+<br><br>
+
+</fieldset>
+
+<br>
+
+<!-- ================= OTROS DATOS ================= -->
+<fieldset>
+<legend>Otros datos</legend>
+
+Fecha de inscripción:
+<input type="date" name="fecha"
+min="2026-02-15" max="2026-03-06" required>
+<br><br>
+
+hobbies:
+<select name="hobbies">
+    <option>  </option>
+    <option>Deporte</option>
+    <option>Musica</option>
+    <option>Arte</option>
+    <option>Cine</option>
+    <option>Lectura</option>
+    <option>Otros</option>
+</select>
+<br><br>
+
+</fieldset>
+
+<br>
+
+<!-- ================= BOTONES ================= -->
+
+<input type="submit" value="Enviar">
+<input type="reset" value="Limpiar">
+
+</form>
+
+</body>
+</html>
